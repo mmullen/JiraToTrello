@@ -59,8 +59,10 @@
     <Compile Include="Credentials\JiraCredentials.cs" />
     <Compile Include="Credentials\CredentialManager.cs" />
     <Compile Include="Credentials\TrelloCredentials.cs" />
+    <Compile Include="JIRA\FieldDataAttribute.cs" />
     <Compile Include="JIRA\JiraBot.cs" />
     <Compile Include="JIRA\JiraConnector.cs" />
+    <Compile Include="JIRA\TCIssueFields.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trello\TrelloBot.cs" />

@@ -18,10 +18,15 @@ namespace JiraToTrello.JIRA
             _jiraCredentials = jiraCredentials;
         }
 
+        public IJiraClient<T> GetAuthorizedConnection<T>() where T : IssueFields, new()
+        {
+            var jira = new JiraClient<T>(_jiraCredentials.Site, _jiraCredentials.User, _jiraCredentials.Password);
+            return jira;
+        }
+
         public IJiraClient GetAuthorizedConnection()
         {
             var jira = new JiraClient(_jiraCredentials.Site, _jiraCredentials.User, _jiraCredentials.Password);
-
             return jira;
         } 
     }
